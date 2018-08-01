@@ -1,7 +1,9 @@
 <?php foreach ($list as $item): ?>
-<h1><?php echo $item['title']; ?></h1>
-<p><?php echo $item['content']; ?></p>
+<h1><a href="
+<?= Yii::$app->urlManager-> createUrl(['test/view', 'id' => $item['id']]); ?>
+"><?= $item['title']; ?></a> </h1>
+<p><?= $item['content']; ?></p>
 
 <hr>
 
-<?php endforeach;
+<?php endforeach; ?>
